@@ -1,1 +1,1 @@
-#Training neural netwoks to play chess 
+# Training neural netwoks to play chess 

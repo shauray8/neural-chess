@@ -1,9 +1,11 @@
+# neural chess
+
 import chess
 board = chess.Board()
 
 moves = []
 
-readfile = open("moves.txt", "r")
+readfile = open("moves-temp.txt", "r")
 
 for line in readfile:
     Type = line.split(" ")
@@ -12,14 +14,13 @@ for i in range(0, len(Type)):
 	a, b = Type[i].split(".")
 	# a, b = b.split("/")
 	moves.append(b)
+
 i = 0
 for move in moves:
 	i += 1
-	print("move number: ",i)
+	print("\nmove number: ",i)
 	board.push_san(move)
 	print(board)
-	print("###############")
-
 
 print("stalemate: ",board.is_stalemate())
 
